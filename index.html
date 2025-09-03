@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Web Page with JavaScript</h1>
+            <p>Explore the interactive elements below and test the form validation</p>
+        </header>
+        
+        <!-- Part 1: Event Handling Examples -->
+        <section id="event-handling">
+            <h2>Event Handling Examples</h2>
+            
+            <div class="element">
+                <h3>Click Event</h3>
+                <p>Click the button to see a message:</p>
+                <button id="click-btn">Click Me!</button>
+                <p id="click-message">Button clicked! 🎉</p>
+            </div>
+            
+            <div class="element">
+                <h3>Mouse Events</h3>
+                <p>Hover over this box to change its color:</p>
+                <div id="hover-box">
+                    Hover over me!
+                </div>
+            </div>
+            
+            <div class="element">
+                <h3>Keyboard Events</h3>
+                <p>Type in the input field to see the text mirrored:</p>
+                <input type="text" id="keyboard-input" placeholder="Start typing...">
+                <p>Mirrored text: <span id="mirror-text"></span></p>
+            </div>
+        </section>
+        
+        <!-- Part 2: Interactive Elements -->
+        <section id="interactive-components">
+            <h2>Interactive Components</h2>
+            
+            <div class="interactive-elements">
+                <!-- Dark/Light Mode Toggle -->
+                <div class="element">
+                    <h3>Dark/Light Mode Toggle</h3>
+                    <button id="mode-toggle-btn">Dark Mode</button>
+                </div>
+                
+                <!-- Counter Game -->
+                <div class="element counter">
+                    <h3>Counter Game</h3>
+                    <p>How many times can you click?</p>
+                    <div class="counter-value" id="counter-value">0</div>
+                    <button id="increment-btn">Click to Count</button>
+                    <button id="reset-counter">Reset</button>
+                </div>
+                
+                <!-- FAQ Section -->
+                <div class="element">
+                    <h3>FAQ Section</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is JavaScript?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>JavaScript is a programming language that enables interactive web pages. It is an essential part of web applications.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What are JavaScript events?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Events are actions that happen in the browser, such as clicks, mouse movements, keyboard input, etc. JavaScript can detect these events and respond to them.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is DOM manipulation?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>DOM manipulation is the process of dynamically modifying the content, structure, or style of a web page using JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tabbed Interface -->
+                <div class="element">
+                    <h3>Tabbed Interface</h3>
+                    <div class="tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                            <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                            <button class="tab-btn" data-tab="tab3">Tab 3</button>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <p>This is the content for Tab 1. JavaScript makes it easy to create tabbed interfaces.</p>
+                            </div>
+                            <div class="tab-pane" id="tab2">
+                                <p>This is the content for Tab 2. You can put anything you want in a tab!</p>
+                            </div>
+                            <div class="tab-pane" id="tab3">
+                                <p>This is the content for Tab 3. Tabbed interfaces help organize content in a small space.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Part 3: Form Validation -->
+        <section id="form-validation">
+            <h2>Form Validation</h2>
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name">
+                    <div class="error" id="name-error">Please enter a valid name (min 2 characters)</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <div class="error" id="email-error">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <div class="error" id="password-error">Password must be at least 8 characters with uppercase, lowercase, and number</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+                    <div class="error" id="confirm-password-error">Passwords do not match</div>
+                </div>
+                
+                <button type="submit">Submit Form</button>
+                
+                <div class="success-message" id="success-message">
+                    Form submitted successfully! 🎉
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
